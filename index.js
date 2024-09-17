@@ -10,7 +10,7 @@
 function initializeData() {
   if (!localStorage.getItem('tasks')) {
     localStorage.setItem('tasks', JSON.stringify(initialData)); 
-    localStorage.setItem('showSideBar', 'true')
+    localStorage.setItem('showSideBar', 'true');
   } else {
     console.log('Data already exists in localStorage');
   }
@@ -18,7 +18,17 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
-
+  const elements = {
+    headerBoardName: document.getElementById('header-board-name'),  // Correct DOM elements
+    columnDivs: document.querySelectorAll('.column-div'),
+    hideSideBarBtn: document.getElementById('hide-sidebar-btn'),
+    showSideBarBtn: document.getElementById('show-sidebar-btn'),
+    themeSwitch: document.getElementById('theme-switch'),
+    createNewTaskBtn: document.getElementById('create-new-task-btn'),
+    modalWindow: document.getElementById('modal-window'),
+    editTaskModal: document.getElementById('edit-task-modal'),
+    filterDiv: document.getElementById('filter-div')
+  };
 }
 
 let activeBoard = ""
