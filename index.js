@@ -123,7 +123,7 @@ function styleActiveBoard(boardName) {
 
 
 function addTaskToUI(task) {
-  const column = document.querySelector('.column-div[data-status="${task.status}"]'); 
+  const column = document.querySelector(`.column-div[data-status="${task.status}"]`);  // Correct template literal
   if (!column) {
     console.error(`Column not found for status: ${task.status}`);
     return;
