@@ -16,12 +16,12 @@ function initializeData() {
 const elements = {
   headerBoardName: document.getElementById('header-board-name'),
   columnDivs: document.querySelectorAll('.column-div'),
-  hideSideBarBtn: document.getElementById('hide-sidebar-btn'),
-  showSideBarBtn: document.getElementById('show-sidebar-btn'),
+  hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
+  showSideBarBtn: document.getElementById('show-side-bar-btn'),
   themeSwitch: document.getElementById('theme-switch'),
   createNewTaskBtn: document.getElementById('add-new-task-btn'),
   modalWindow: document.getElementById('new-task-modal-window'),
-  editTaskModal: document.getElementById('edit-task-modal'),
+  editTaskModal: document.getElementById('edit-task-modal-window'),
   filterDiv: document.getElementById('filter-div'),
 };
 
@@ -175,7 +175,7 @@ function addTask(event) {
   const task = {
     title: document.getElementById('task-title-input').value,
     board: activeBoard,
-    status: 'TODO',
+    status: 'todo',
     id: new Date().getTime()
   };
 
@@ -198,7 +198,7 @@ function toggleTheme() {
 
 // Toggle sidebar visibility
 function toggleSidebar(show) {
-  const sidebar = document.getElementById('sidebar');
+  const sidebar = document.getElementById('side-bar-div');
   sidebar.style.display = show ? 'block' : 'none';
   localStorage.setItem('showSideBar', show ? 'true' : 'false');
 }
