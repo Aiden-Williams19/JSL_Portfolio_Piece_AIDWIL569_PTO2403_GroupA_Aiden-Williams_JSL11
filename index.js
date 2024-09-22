@@ -175,7 +175,7 @@ function addTask(event) {
   const task = {
     title: document.getElementById('task-title-input').value,
     board: activeBoard,
-    status: 'todo',
+    status: 'todo', 
     id: new Date().getTime()
   };
 
@@ -233,8 +233,7 @@ function setupEventListeners() {
 initializeData();
 fetchAndDisplayBoardsAndTasks();
 setupEventListeners();
-toggleTheme();
-toggleSidebar();
+
 
 // Apply saved theme
 if (localStorage.getItem('light-theme') === 'enabled') {
